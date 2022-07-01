@@ -19,14 +19,13 @@ We will capture and report on the following:
 - Hardware 
 - Serial Number
 - Software Version
+- Uptime information
+- Interfaces with IP and status 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;python demo1-2-backup.py *filename.ext*<br>
 
-Output will be formatted in the following format, in a text file:
 
-| Hostname | Model | Serial | Version |
-| ----------- | ----------- |----------- | ----------- |
-| R1-EX | CSR1000V | 123456789 | 1.2.3
+To Do - build master output file (like invnetory.txt )
 
 
 ### Demo 3

@@ -85,7 +85,7 @@ def userdata():
     return(getuser, getpwd1)
 
 # Perform the backups of the devices using the data file of devices, the username and password entered.
-def backupconfigs(datafile, getuser, getpwd1, errorcount, successcount):
+def getinvnetory(datafile, getuser, getpwd1, errorcount, successcount):
 
     # Create empty list that we can append the hostnames to
     devicelist = []
@@ -100,7 +100,7 @@ def backupconfigs(datafile, getuser, getpwd1, errorcount, successcount):
         if len(line) < 2:
             print('Looks like a blank line, skipping.\nPlease check input file.\n')
             continue
-        print(f'\nAttempting to connect to {hostconnect}...\n')
+        print(f'\nAttempting to connect to {hostconnect}...')
 
         devicelist.append(hostconnect)
 
@@ -152,13 +152,6 @@ def backupconfigs(datafile, getuser, getpwd1, errorcount, successcount):
                     print(f'\t\t\t{datapoint["intf"]:20}\t{datapoint["ipaddr"]:10}\t{datapoint["proto"]:10}')
                     savefile.write(f'\t\t\t{datapoint["intf"]:20}\t{datapoint["ipaddr"]:10}\t{datapoint["proto"]:10}\n')
 
-
-
-
-
-
-
-
                 savefile.close()
                 successcount += 1
 
@@ -209,8 +202,8 @@ def backupconfigs(datafile, getuser, getpwd1, errorcount, successcount):
     if errorcount >= 1:
         print(f'We had {errorcount} errors - please check error log\n')
     else:
-        print(f'No errors encountered.  Looks like a clean run!\nWe backed up {successcount} devices')
-        errorlog.write(f'\n\nNo errors encountered.\n\nLooks like a clean run.\nWe backed up {successcount} devices.\n')
+        print(f'\n\nNo errors encountered.  Looks like a clean run!')
+        errorlog.write(f'\n\nNo errors encountered.\n\nLooks like a clean run.\n')
         for item in devicelist:
             print('\t' + item)
 
@@ -228,4 +221,4 @@ if __name__ == '__main__':
     welcome()
     getarg()
     userdata()
-    backupconfigs(datafile, getuser, getpwd1, errorcount, successcount)
+    getinvnetory(datafile, getuser, getpwd1, errorcount, successcount)
