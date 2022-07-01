@@ -1,0 +1,4 @@
+r1.fryguy.lab
+r2.fryguy.lab
+r3.fryguy.lab
+r4.fryguy.lab
