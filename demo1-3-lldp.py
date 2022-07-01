@@ -250,7 +250,7 @@ if __name__ == '__main__':
     signal(SIGINT, handler)
     errorcount = 0
     successcount = 0
-    enablelogging()
+    #enablelogging()
     timeinfo()
     welcome()
     getarg()
