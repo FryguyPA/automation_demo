@@ -110,7 +110,7 @@ def backupconfigs(datafile, getuser, getpwd1, errorcount, successcount):
             "password": getpwd1,
         }
 
-        errorlog = open('errors.log', 'w')
+        errorlog = open('demo1-1-errors.log', 'w')
         header_string = (f'Created on {dt_string} by {envuser} \n')
         errorlog.write(header_string)
         errorlog.write('-' * len(header_string) + '\n')
@@ -124,7 +124,7 @@ def backupconfigs(datafile, getuser, getpwd1, errorcount, successcount):
                 # print(hostname[1])
                 tempvar = hostname[1].split('-')
 
-                savefile = open(hostname[1] + '.cfg', 'w')
+                savefile = open(hostname[1] + '-backup.cfg', 'w')
                 savefile.write(header_string)
                 savefile.write('-' * len(header_string) + '\n')
 
