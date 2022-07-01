@@ -200,5 +200,3 @@ if __name__ == '__main__':
     getarg()
     userdata()
     backupconfigs(datafile, getuser, getpwd1, errorcount, successcount)
-
-    #idhost(data)
