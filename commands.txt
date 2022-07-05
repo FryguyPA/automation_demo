@@ -1,0 +1,5 @@
+show ip int br
+show ip ospf interface
+show ver
+show ip ssh
+show system users

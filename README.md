@@ -29,7 +29,7 @@ We will capture and report on the following:
 ---
 ### Demo 3
 
-###demo1-3-lldp.py
+####demo1-3-lldp.py
 
 The purpose of this script is to demonstrate pulling the lldp neighbor information from each device.  Once <br> 
 we have that data, we will then parse it out using NTCTemplates to pull remote hostname and interface from the output.<BR>
@@ -39,5 +39,14 @@ remote information and push that config to the device.<br>
 <br><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;python demo1-3-backup.py *filename.ext*<br>
 ---
+
+### Demo 4
+
+#### demo1-4-commands.py
+
+The purpose of this script is to allow you a way to provide a list of devices and commands.  The list will then iterate<br>
+over the commands and save the output to a file.  This should be way for you to gather lots of data quickly.
+<br><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;python demo1-3-commands.py *devices.txt* *commands.txt* <br>
 
 
