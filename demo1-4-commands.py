@@ -105,9 +105,6 @@ def runcommands(datafile, commandfile, getuser, getpwd1, errorcount, successcoun
 
     # Adding the commands to a list, easier to iterate over, yet not really necessary when I think about it
     for item in commandfile:
-        if len(line) < 2:
-            print('Looks like a blank line, skipping.\nPlease check command file.\n')
-            continue
         commandlist.append(item)
 
     # Read the input data file, assign it to connecthost
