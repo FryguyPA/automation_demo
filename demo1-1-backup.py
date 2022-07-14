@@ -61,7 +61,7 @@ def getarg(argv=sys.argv[1:]):
     return datafile
 
 
-# Get username and password information
+# Get username and password information.  Using pwinput as it echos * to the screen.
 def userdata():
     global getuser, getpwd1, envuser
     envuser = getpass.getuser()
