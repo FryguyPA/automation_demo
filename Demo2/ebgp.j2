@@ -1,0 +1,21 @@
+ip access-list standard {{ in_acl }}
+remark Used for accepted networks
+{% for item in rec_networks %} permit {{ item }}
+{% endfor %}
+
+ip access-list standard {{ out_acl }}
+remark Used for advertised networks
+{% for item in adv_networks %} permit {{ item }}
+{% endfor %}
+
+route-map {{ routemap_in }}
+ match ip address {{ in_acl }}
+
+route-map {{ routemap_out }}
+ match ip address {{ out_acl }}
+
+router bgp {{ asn }}
+neighbor {{ peer }} remote-as {{ peerasn }}
+neighbor {{ peer }} route-map {{routemap_in}} in
+
+neighbor {{ peer }} route-map {{routemap_out }}  out

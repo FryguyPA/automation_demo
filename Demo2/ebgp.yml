@@ -1,0 +1,21 @@
+---
+jinja2: ebgp.j2
+type: ebgp
+asn: 65500
+peerasn: 65535
+peer: 172.16.255.10
+routemap_in: accept-routes
+routemap_out: advertised-routes
+in_acl: accepted-bgp
+out_acl: advertised-bgp
+rec_networks:
+ - 10.10.10.10 0.0.0.0
+ - 169.254.0.0 0.0.255.255
+ - 192.0.0.0 0.0.0.255
+ - 192.0.2.0 0.0.0.255
+ - 198.88.99.0 0.0.0.255
+ - 203.0.113.0 0.0.0.255
+ - 198.18.0.0 0.0.255.255
+adv_networks:
+ - 10.0.0.0 0.255.255.255
+

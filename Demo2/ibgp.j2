@@ -1,0 +1,8 @@
+router bgp {{ asn }}
+neighbor {{ peergroup }} peer-group
+neighbor {{ peergroup }} update-source loopback0
+neighbor {{ peergroup }} remote-as {{ asn }}
+{% for item in peers %}
+neighbor {{ item }} peer-group ibgp
+{% endfor %}
+

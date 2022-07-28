@@ -1,0 +1,33 @@
+My to do list
+
+Create master list of output and place in text file using columns or something
+figure it out - interfaces will be the fun one :)
+
+
+Next demos:
+
+Need to do a compare of configs - pull running, do the deploy , compare and report differences
+
+
+Look at what PyTest can do - that is making waves at Cisco for some stuff
+
+
+Demo 2:
+
+Yaml
+Jinja2
+
+Build BGP peering with ISP router and validate network
+Using Pyats to compare before/after to see changes
+Can we use this to test/validate other confings?
+
+
+pyats create testbed interactive --output testbed.yml --encode-password
+
+genie learn all --testbed-file inventory.yml --output pre_change
+
+genie learn all --testbed-file inventory.yml --output post_change
+
+genie diff pre_change post_change --output diff_change
+
+more diff_change/*
